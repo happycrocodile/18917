@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss/custom.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Tienda e-commerce</h1>
+    </header>
+    <div class="container">
+        <div class="my-5">
+            <h3>Smartphones</h3>
+        </div>
+        <div class="row row-cols-lg-4" id="app"></div>
+    </div>
+    <script src="assets/axios.min.js"></script>
+    <script src="https://www.mercadopago.com/v2/security.js" view="home"></script>
+    <script src="main.js"></script>
+    <script>
+        const app = document.getElementById("app");
+
+        const createProductCard = data => {
+
+            let base = document.createElement("div");
+            base.className = "col-12";
+
+            let card = document.createElement("div");
+            card.className = "card";
+
+            let image = document.createElement("img");
+            image.src = imageBaseUrl + data.image;
+            image.className = "card-img-top";
+            image.alt = data.name;
+
+            let cardBody = document.createElement("div");
+            cardBody.classList.add("card-body", "text-center");
+
+            let name = document.createElement("h5");
+            name.className = "card-title";
+            name.innerText = data.name;
+
+            let unitPrice = document.createElement("p");
+            unitPrice.className = "card-subtitle";
+            unitPrice.innerText = String.fromCharCode(36) + data.unit_price;
+
+            let link = document.createElement("a");
+            link.classList.add("btn", "btn-primary", "text-white");
+            link.innerText = "Comprar";
+            link.href = "product-details?id=" + data.id;
+
+            cardBody.appendChild(name);
+            cardBody.appendChild(unitPrice);
+            cardBody.appendChild(link);
+
+            card.appendChild(image);
+            card.appendChild(cardBody);
+
+            base.appendChild(card);
+
+            return base;
+        };
+
+        const getProducts = async () => {
+            let { data } = await axios.get("/products");
+
+            data.forEach(product => {
+                let productCard = createProductCard(product);
+                app.appendChild(productCard);
+            });
+        }
+
+
+        window.addEventListener("load", () => {
+            getProducts();
+        });
+    </script>
+</body>
+
+</html>
