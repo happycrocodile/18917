@@ -1,0 +1,23 @@
+
+
+$primary: #009ee3;
+
+$grid-gutter-width: 0rem;
+
+@import "../assets/bootstrap/bootstrap.scss";
+
+header {
+    height: 40vh;
+    width: auto;
+    background-image: url("../assets/header.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    padding-bottom: 2rem;
+}
