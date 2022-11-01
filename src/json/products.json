@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1011,
+        "name": "Motorola Moto G52",
+        "image": "1.jpg",
+        "description": "Dispositivo móvil de Tienda e-commerce",
+        "category_id": "smartphone",
+        "unit_price": 2500.50
+    },
+    {
+        "id": 2104,
+        "name": "Motorola Moto G41",
+        "image": "2.jpg",
+        "description": "Dispositivo móvil de Tienda e-commerce",
+        "category_id": "smartphone",
+        "unit_price": 1460.55
+    },
+    {
+        "id": 3222,
+        "name": "Motorola Edge 30",
+        "image": "3.jpg",
+        "description": "Dispositivo móvil de Tienda e-commerce",
+        "category_id": "smartphone",
+        "unit_price": 1325.80
+    },
+    {
+        "id": 2222,
+        "name": "Motorola G82 5G",
+        "image": "8.jpg",
+        "description": "Dispositivo móvil de Tienda e-commerce",
+        "category_id": "smartphone",
+        "unit_price": 6060.20
+    },
+    {
+        "id": 1043,
+        "name": "Samsung S21 FE 5G",
+        "image": "4.jpg",
+        "description": "Dispositivo móvil de Tienda e-commerce",
+        "category_id": "smartphone",
+        "unit_price": 1890.65
+    },
+    {
+        "id": 5122,
+        "name": "Samsung A33",
+        "image": "5.jpg",
+        "description": "Dispositivo móvil de Tienda e-commerce",
+        "category_id": "smartphone",
+        "unit_price": 1555.35
+    },
+    {
+        "id": 6004,
+        "name": "Samsung A32",
+        "image": "6.jpg",
+        "description": "Dispositivo móvil de Tienda e-commerce",
+        "category_id": "smartphone",
+        "unit_price": 890.40
+    },
+    {
+        "id": 1987,
+        "name": "Samsung A22 5G",
+        "image": "7.jpg",
+        "description": "Dispositivo móvil de Tienda e-commerce",
+        "category_id": "smartphone",
+        "unit_price": 1160.25
+    }
+]
